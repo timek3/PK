@@ -15,11 +15,11 @@ public class Kategoria {
 	
 	public void dodajProdukt(Produkt p) {
 		if(p== null) {
-			System.err.println(nazwa + ": Nie mo¿na dodaæ produktu o pustej nazwie");
+			System.err.println(nazwa + ": Nie moÅ¼na dodaÄ‡ produktu o pustej nazwie");
 			return;
 		}
 		if (ile_produktow >= lista_produktow.length) {
-			System.err.println(nazwa + ": Nie mozna dodac wiecej produktów");
+			System.err.println(nazwa + ": Nie mozna dodac wiecej produktÃ³w");
 			return;
 		}
 		lista_produktow[ile_produktow++] = p;
@@ -27,10 +27,10 @@ public class Kategoria {
 	
 	public void wyswietlProdukty() {
 		if(ile_produktow == 0) {
-			System.out.println(nazwa + ": Brak produktów na liscie");
+			System.out.println(nazwa + ": Brak produktÃ³w na liscie");
 			return;
 		}
-		System.out.println(nazwa + " - lista produktów:");
+		System.out.println(nazwa + " - lista produktÃ³w:");
 		
 		for(int i = 0; i < ile_produktow; i++) {
 			System.out.println(i+1 + ". " + lista_produktow[i].toString());
