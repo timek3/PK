@@ -7,8 +7,8 @@ public class Lodowka {
 	private Scanner sc;
 	
 	public Lodowka() {
-		mieso = new Kategoria("Miêso");
-		nabial = new Kategoria("Nabia³");
+		mieso = new Kategoria("MiÄ™so");
+		nabial = new Kategoria("NabiaÅ‚");
 		warzywka = new Kategoria("Warzywa");
 		
 		sc = new Scanner(System.in);
@@ -16,7 +16,7 @@ public class Lodowka {
 	}
 	private void init() {		
 		mieso.dodajProdukt(new Produkt("Szynka",3.5,1));
-		mieso.dodajProdukt(new Produkt("Kie³basa",2,2));
+		mieso.dodajProdukt(new Produkt("KieÅ‚basa",2,2));
 		mieso.dodajProdukt(new Produkt("Stek",3.4,2));
 		mieso.dodajProdukt(new Produkt("Kurczak",2,3));
 		mieso.dodajProdukt(new Produkt("Schabowy",4.1,1));
@@ -28,7 +28,7 @@ public class Lodowka {
 		nabial.dodajProdukt(new Produkt("Inny ser",4.1,1));
 				
 		warzywka.dodajProdukt(new Produkt("Pomidorek",3.5,1));
-		warzywka.dodajProdukt(new Produkt("Ogóreczek",2,2));
+		warzywka.dodajProdukt(new Produkt("OgÃ³reczek",2,2));
 		warzywka.dodajProdukt(new Produkt("Ziemniaczek",3.4,2));
 		warzywka.dodajProdukt(new Produkt("Kapustka",2,3));
 		warzywka.dodajProdukt(new Produkt("Seler",4.1,1));
@@ -37,11 +37,11 @@ public class Lodowka {
 	public void wlacz(){
 		Kategoria k;
 		while(true) {
-			System.out.println("Co chcesz zrobiæ? Wybierz opcje: ");
-			System.out.println("\t(1) otworzyæ lodówke");
+			System.out.println("Co chcesz zrobiÄ‡? Wybierz opcje: ");
+			System.out.println("\t(1) otworzyÄ‡ lodÃ³wke");
 			System.out.println("\t(2) dodac nowy produkt");
-			System.out.println("\t(3) usun¹æ produkt");
-			System.out.println("\t(9) zamkn¹æ lodówkê");
+			System.out.println("\t(3) usunÄ…Ä‡ produkt");
+			System.out.println("\t(9) zamknÄ…Ä‡ lodÃ³wkÄ™");
 			System.out.print("? ");
 			byte o = sc.nextByte(); sc.nextLine();
 			switch (o) {
@@ -56,7 +56,7 @@ public class Lodowka {
 					if(k!=null) {
 						System.out.print("Podaj nazwe produktu");
 						String nazwa = sc.nextLine();
-						System.out.print("Podaj iloœæ produktu");
+						System.out.print("Podaj iloÅ›Ä‡ produktu");
 						double ilosc = sc.nextDouble();
 						int ileMaDni = 0;				
 						k.dodajProdukt(new Produkt(nazwa, ilosc, ileMaDni));
@@ -77,14 +77,14 @@ public class Lodowka {
 				case 9:
 					return;
 				default:
-					System.err.println("Nie rozpoznajê opcji!");
+					System.err.println("Nie rozpoznajÄ™ opcji!");
 			}
 		}
 	}
 	
 	private Kategoria wybierzKategorie() {
 		Kategoria k=null;
-		System.out.println("Której kategorii u¿yæ? Wybierz opcjê: ");
+		System.out.println("KtÃ³rej kategorii uÅ¼yÄ‡? Wybierz opcjÄ™: ");
 		System.out.println("\t(1)"+mieso.getNazwa());
 		System.out.println("\t(2)"+nabial.getNazwa());
 		System.out.println("\t(3)"+warzywka.getNazwa());
